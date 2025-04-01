@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Patient Demographics Correlate With Their Episode of Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+            color: #2c3e50;
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.5em;
+        }
+        p, li {
+            font-size: 1.05em;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How Patient Demographics Correlate With Their Episode of Care</h1>
+
+    <div class="section" id="introduction">
+        <h2>Project Introduction</h2>
+        <img src="project_intro.jpg" alt="Healthcare image" style="float: right; margin: 10px 0 10px 20px; max-width: 300px; border-radius: 10px;">
+        <p>
+            Research has shown that healthcare outcomes and treatment experiences can greatly vary from patient to patient based on their demographics. 
+            Factors such as age, gender, and medical condition influence key aspects of a patient’s episode of care, such as length of hospital stay and test results. 
+            Our work aims to analyze how patient demographics impact healthcare episodes using a Kaggle healthcare dataset. 
+            Specifically, we explore whether certain age groups are associated with shorter hospital stays, whether specific medical conditions correlate with extended hospitalization, 
+            and if inconclusive test results are linked to quicker discharges. By leveraging data visualization and statistical analysis, we aim to uncover patterns that could inform better healthcare decisions.
+        </p>
+    </div>
+
+    <div class="section" id="data">
+        <h2>Data Overview</h2>
+        <p>
+            Our dataset comes from Kaggle and originally includes 55,500 observations. 
+            We filtered it down to approximately 3,000–5,000 records for manageable analysis. 
+            The dataset contains information about patient demographics and their episodes of care, including attributes such as:
+        </p>
+        <ul>
+            <li>Age</li>
+            <li>Gender</li>
+            <li>Medical Condition</li>
+            <li>Date of Admission and Discharge</li>
+            <li>Test Results</li>
+            <li>Medication</li>
+            <li>Insurance Provider</li>
+            <li>Billing Amount</li>
+        </ul>
+        <p>
+            An additional derived attribute, <strong>Duration of Stay</strong>, was calculated by subtracting the admission date from the discharge date. 
+            This allowed us to analyze episode lengths in relation to other variables.
+        </p>
+    </div>
+
+    <div class="section" id="references">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://journals.lww.com/jbjsjournal/Fulltext/2015/07010/What_Drives_Variation_in_Episode_of_Care_Payments.1.aspx" target="_blank">Garrity et al. (2015) - Journal of Bone and Joint Surgery</a></li>
+            <li><a href="https://www.healthaffairs.org/doi/10.1377/hlthaff.27.3.528" target="_blank">Jha et al. (2008) - Health Affairs</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="visualizations">
+        <h2>Visualizations</h2>
+        <p>
+            This section will contain at least five data visualizations, including one made with Altair and one with D3. Each visualization will explore relationships such as:
+        </p>
+        <ul>
+            <li>Gender vs Duration of Stay</li>
+            <li>Age Group vs Episode of Care Duration</li>
+            <li>Test Result Type vs Discharge Speed</li>
+            <li>Preferred Medication for Each Medical Condition (Treemap)</li>
+            <li>Interactive histogram for Age Group Distribution</li>
+        </ul>
+        <p>Interactive elements will include tooltips, filtering, and other ways to engage with the data.</p>
+    
+        <h3>Treemap: Medication Preference by Medical Condition</h3>
+        <iframe src="treemap.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+    
+        <p>
+            This interactive treemap reveals which medications are most commonly associated with specific medical conditions. 
+            It highlights treatment patterns — for example, Lipitor appears frequently with hypertension and diabetes. 
+            These patterns may suggest clinical preferences or opportunities for further study into medication effectiveness.
+        </p>
+    </div>
+
+    <div class="section" id="summary">
+        <h2>Summary & Future Work</h2>
+        <p>
+            Initial results show that specific demographics (like age and condition) have clear links to length of hospital stay and types of medications prescribed. 
+            For example, Lipitor is often used in cases of hypertension and diabetes, while Aspirin appears more for cardiovascular-related conditions.
+            In the future, we hope to expand the analysis by including patient outcomes and recovery data to better evaluate the effectiveness of prescribed treatments. 
+            We also aim to implement demographic filters and time-based trend analysis.
+        </p>
+    </div>
+</body>
+</html>
