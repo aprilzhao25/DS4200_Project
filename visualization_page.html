@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Patient Demographics Correlate With Their Episode of Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(to right, #f0f8ff, #e6f2ff);
+            color: #2c3e50;
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 1.5em;
+        }
+        p, li {
+            font-size: 1.05em;
+        }
+        .section {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visualizations</h1>
+
+
+    <div class="section" id="visualization_description">
+        <h2>Overview</h2>
+        <p>
+            This section contains four data visualizations using plotly, D3, and Altair. Each explores relationships such as:
+        </p>
+        <ul>
+            
+            <li>Preferred Medication for Each Medical Condition (Treemap)</li>
+            <li>Billing Amount by Insurance Provider or Medical Condition (Boxplot) </li>
+            <li>Age Group Distribution by Gender with Average Duration of Stay (Bar Chart)</li>
+            <li>Distribution of Test Result Type by Gender (Bar Chart)</li>
+
+        </ul>
+        <p>Interactive elements include tooltips and data grouping.</p>
+    
+    </div>
+
+    <div class="section" id="visualizations">
+        
+        <h3>Treemap: Medication Preference by Medical Condition</h3>
+        <p>
+            This interactive treemap reveals which medications are most commonly associated with specific medical conditions.
+        </p>
+        <iframe src="treemap_shift.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <p>
+            [DESCRIPTION]
+        </p>
+
+        <hr>
+        <br>
+        <br>
+
+        <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
+        <p>
+            This boxplot can show the Billing Amount distribution by Insurance Provider or by Medical Condition.
+        </p>
+
+        <div id="boxplot"></div>
+
+        <label for = "groupSelect">Grouping: </label>
+        <select id = "groupSelect">
+            <option value = "Insurance Provider">Insurance Provider</option>
+            <option value = "Medical Condition">Medical Condition</option>
+        </select>
+
+        <br>
+        <br>
+        <br>
+        <p>
+            [DESCRIPTION]
+        </p>
+
+        <script src='https://d3js.org/d3.v7.min.js'></script>
+        <script src='box_plot.js'></script>   
+    
+        <hr>
+        <br>
+        <br>
+
+        <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
+        <p>
+            This interactive bar chart displays the number of patients across age groups and genders.
+        </p>
+        <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <p>
+            [DESCRIPTION]
+        </p>
+    
+        <hr>
+        <br>
+        <br>
+
+
+        <h3>Bar Chart: Distribution of Test Result Type by Gender</h3>
+        <p>
+            This bar chart reveals the number of patients with each test result based on gender.
+        </p>
+        <iframe src="Gender_Test_Results.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <p>
+            [DESCRIPTION]
+        </p>
+
+
+        <hr>
+        <br>
+        <button id = 'NB' style = 'float: right;'>Back to Home</button>
+        
+        <script>
+            const navigatebutton = document.getElementById('NB')
+            navigatebutton.addEventListener('click', function(){
+                window.location.href = 'index.html'
+            })
+        </script>
+
+        <br>
+
+    </div>
+
+    
+    
+
+    </body>
+    </html>

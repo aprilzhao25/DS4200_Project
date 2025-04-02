@@ -50,6 +50,7 @@
 </head>
 <body>
     <h1>How Patient Demographics Correlate With Their Episode of Care</h1>
+    <h4>By: Bella Bartolomei, Sameera Boga, and April Zhao</h4>
 
     <div class="section" id="introduction">
         <h2>Project Introduction</h2>
@@ -66,8 +67,8 @@
     <div class="section" id="data">
         <h2>Data Overview</h2>
         <p>
-            Our dataset comes from Kaggle and originally includes 55,500 observations. 
-            We filtered it down to approximately 3,000–5,000 records for manageable analysis. 
+            Our dataset comes from <b>Kaggle</b> and originally includes 55,500 observations. 
+            We filtered it down to approximately 5,000–8,000 records for manageable analysis. 
             The dataset contains information about patient demographics and their episodes of care, including attributes such as:
         </p>
         <ul>
@@ -94,67 +95,20 @@
         </ul>
     </div>
 
-    <div class="section" id="visualizations">
-        <h2>Visualizations</h2>
-        <p>
-            This section contains four data visualizations, including one made with Altair and one with D3. Each explores relationships such as:
-        </p>
-        <ul>
-            
-            <li>Preferred Medication for Each Medical Condition (Treemap)</li>
-            <li>Billing Amount by Insurance Provider or Medical Condition (Boxplot) </li>
-            <li>Age Group Distribution by Gender with Average Duration of Stay (Bar Chart)</li>
-            <li>Distribution of Test Result Type by Gender (Bar Chart)</li>
+    <hr>
 
-        </ul>
-        <p>Interactive elements include tooltips, filtering, and other ways to engage with the data.</p>
-    
-        <h3>Treemap: Medication Preference by Medical Condition</h3>
-        <iframe src="treemap_shift.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
-        <p>
-            This interactive treemap reveals which medications are most commonly associated with specific medical conditions.
-        </p>
-
-        <hr>
-
-        <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
-
-        <div id="boxplot"></div>
-
-        <label for = "groupSelect">Grouping: </label>
-        <select id = "groupSelect">
-            <option value = "Insurance Provider">Insurance Provider</option>
-            <option value = "Medical Condition">Medical Condition</option>
-        </select>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>
-            This boxplot can show the Billing Amount distribution by Insurance Provider or by Medical Condition.
-        </p>
-
-        <script src='https://d3js.org/d3.v7.min.js'></script>
-        <script src='box_plot.js'></script>   
-    
-        <hr>
-
-        <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
-        <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
-        <p>
-            This interactive bar chart displays the number of patients across age groups and genders.
-        </p>
-    
-        <hr>
-
-        <h3>Bar Chart: Distribution of Test Result Type by Gender</h3>
-        <iframe src="Gender_Test_Results.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
-        <p>
-            This bar chart reveals the number of patients with each test result based on gender.
-        </p>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+        <h3><i>Let's look at some Visualizations</i></h3>
+        <button id="NB">Visualizations</button>
     </div>
+    
+    <script>
+        document.getElementById('NB').addEventListener('click', function(){
+            window.location.href = 'visualization_page.html';
+        });
+    </script>
+
+    <br>
     
     <div class="section" id="summary">
         <h2>Summary & Future Work</h2>
@@ -170,6 +124,7 @@
 
             Final Visualization: Date of Admission Trend (Line Graph)
         </p>
+
 
 
     </div>
