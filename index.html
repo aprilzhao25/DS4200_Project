@@ -121,12 +121,18 @@
         </p>
     
         <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
+
         <div id="boxplot"></div>
-        <label for="groupSelect">Grouping: </label>
-        <select id="groupSelect">
-            <option value="Insurance Provider">Insurance Provider</option>
-            <option value="Medical Condition">Medical Condition</option>
+
+        <label for = "groupSelect">Grouping: </label>
+        <select id = "groupSelect">
+            <option value = "Insurance Provider">Insurance Provider</option>
+            <option value = "Medical Condition">Medical Condition</option>
         </select>
+
+        <script src='https://d3js.org/d3.v7.min.js'></script>
+        <script src='box_plot.js'></script>   
+
         <p>
             This D3 box plot allows the user to explore variation in billing amounts across insurance providers and conditions.
         </p>
@@ -143,6 +149,8 @@
         <p>
             Initial results show that specific demographics (like age and condition) have clear links to length of hospital stay and types of medications prescribed...
         </p>
+
+
     </div>
     </body>
     </html>
