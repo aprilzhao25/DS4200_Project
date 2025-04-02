@@ -25,8 +25,7 @@ healthcare.then(function(data) {
       .select('#boxplot')
       .append('svg')
         .attr('width', width)
-        .attr('height', height)
-        .style('background', '#e9f7f2');
+        .attr('height', height);
 
     // Set up scales for x and y axes
     function drawBoxPlot(groupBy) {
@@ -104,7 +103,7 @@ healthcare.then(function(data) {
             .attr("y", yScale(quantiles.q3))
             .attr("width", boxWidth)
             .attr("height", height - margin.bottom - (yScale(quantiles.q1) - yScale(quantiles.q3)))
-            .attr("fill", "lightgreen")
+            .attr("fill", "lightblue")
             .attr("stroke", "black");
 
 
