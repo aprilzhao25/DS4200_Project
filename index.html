@@ -97,7 +97,7 @@
     <div class="section" id="visualizations">
         <h2>Visualizations</h2>
         <p>
-            This section will contain at least five data visualizations, including one made with Altair and one with D3. Each visualization will explore relationships such as:
+            This section contains five data visualizations, including one made with Altair and one with D3. Each explores relationships such as:
         </p>
         <ul>
             <li>Gender vs Duration of Stay</li>
@@ -106,33 +106,43 @@
             <li>Preferred Medication for Each Medical Condition (Treemap)</li>
             <li>Interactive histogram for Age Group Distribution</li>
         </ul>
-        <p>Interactive elements will include tooltips, filtering, and other ways to engage with the data.</p>
+        <p>Interactive elements include tooltips, filtering, and other ways to engage with the data.</p>
     
         <h3>Treemap: Medication Preference by Medical Condition</h3>
-        <iframe src="treemap.html" width="100%" height="600" style="border:none; border-radius: 10px;">
-            
+        <iframe src="treemap.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This interactive treemap reveals which medications are most commonly associated with specific medical conditions. 
-            It highlights treatment patterns — for example, Lipitor appears frequently with hypertension and diabetes. 
-            These patterns may suggest clinical preferences or opportunities for further study into medication effectiveness.
+            This interactive treemap reveals which medications are most commonly associated with specific medical conditions...
         </p>
     
         <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
         <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This interactive bar chart displays the number of patients across age groups and genders. 
-            The tooltip also shows the average hospital stay for each group, offering insights into whether age or gender may impact treatment duration.
+            This interactive bar chart displays the number of patients across age groups and genders...
+        </p>
+    
+        <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
+        <div id="boxplot"></div>
+        <label for="groupSelect">Grouping: </label>
+        <select id="groupSelect">
+            <option value="Insurance Provider">Insurance Provider</option>
+            <option value="Medical Condition">Medical Condition</option>
+        </select>
+        <p>
+            This D3 box plot allows the user to explore variation in billing amounts across insurance providers and conditions.
+        </p>
+    
+        <h3>Bar Chart: Test Result Type vs Discharge Speed</h3>
+        <iframe src="Gender_Test_Results.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <p>
+            This bar chart reveals whether test result types impact the discharge speed of patients.
         </p>
     </div>
-
+    
     <div class="section" id="summary">
         <h2>Summary & Future Work</h2>
         <p>
-            Initial results show that specific demographics (like age and condition) have clear links to length of hospital stay and types of medications prescribed. 
-            For example, Lipitor is often used in cases of hypertension and diabetes, while Aspirin appears more for cardiovascular-related conditions.
-            In the future, we hope to expand the analysis by including patient outcomes and recovery data to better evaluate the effectiveness of prescribed treatments. 
-            We also aim to implement demographic filters and time-based trend analysis.
+            Initial results show that specific demographics (like age and condition) have clear links to length of hospital stay and types of medications prescribed...
         </p>
     </div>
-</body>
-</html>
+    </body>
+    </html>
