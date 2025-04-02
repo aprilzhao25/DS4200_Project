@@ -10,7 +10,7 @@ healthcare.then(function(data) {
 
     // Define the dimensions and margins for the SVG
     let
-      width = 700,
+      width = 800,
       height = 400;
       
     let margin = {
@@ -52,8 +52,8 @@ healthcare.then(function(data) {
 
       xAxis
         .append('text')
-          .attr('x', width - margin.left)
-          .attr('y', -2)
+          .attr('x', margin.right + 700)
+          .attr('y', 25)
           .style('stroke', 'black')
           .text(groupBy);
 
@@ -103,7 +103,7 @@ healthcare.then(function(data) {
             .attr("y", yScale(quantiles.q3))
             .attr("width", boxWidth)
             .attr("height", height - margin.bottom - (yScale(quantiles.q1) - yScale(quantiles.q3)))
-            .attr("fill", "lightblue")
+            .attr("fill", "#fdb462")
             .attr("stroke", "black");
 
 

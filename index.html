@@ -104,7 +104,7 @@
             <li>Preferred Medication for Each Medical Condition (Treemap)</li>
             <li>Billing Amount by Insurance Provider or Medical Condition (Boxplot) </li>
             <li>Age Group Distribution by Gender with Average Duration of Stay (Bar Chart)</li>
-            <li>Distribution of Test Result Type by Gender</li>
+            <li>Distribution of Test Result Type by Gender (Bar Chart)</li>
 
         </ul>
         <p>Interactive elements include tooltips, filtering, and other ways to engage with the data.</p>
@@ -112,15 +112,11 @@
         <h3>Treemap: Medication Preference by Medical Condition</h3>
         <iframe src="treemap.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This interactive treemap reveals which medications are most commonly associated with specific medical conditions...
+            This interactive treemap reveals which medications are most commonly associated with specific medical conditions.
         </p>
-    
-        <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
-        <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
-        <p>
-            This interactive bar chart displays the number of patients across age groups and genders...
-        </p>
-    
+
+        <hr>
+
         <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
 
         <div id="boxplot"></div>
@@ -131,24 +127,48 @@
             <option value = "Medical Condition">Medical Condition</option>
         </select>
 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+            This boxplot can show the Billing Amount distribution by Insurance Provider or by Medical Condition.
+        </p>
+
         <script src='https://d3js.org/d3.v7.min.js'></script>
         <script src='box_plot.js'></script>   
+    
+        <hr>
 
+        <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
+        <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This D3 box plot allows the user to explore variation in billing amounts across insurance providers and conditions.
+            This interactive bar chart displays the number of patients across age groups and genders.
         </p>
     
+        <hr>
+
         <h3>Bar Chart: Distribution of Test Result Type by Gender</h3>
         <iframe src="Gender_Test_Results.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This bar chart reveals the number of patients with each test result based on gender...
+            This bar chart reveals the number of patients with each test result based on gender.
         </p>
     </div>
     
     <div class="section" id="summary">
         <h2>Summary & Future Work</h2>
         <p>
-            Initial results show that specific demographics (like age and condition) have clear links to length of hospital stay and types of medications prescribed...
+            Initially, we wanted to find bias within the patient demographics with information from their Episodes of Care.
+            When looking at factors like Age, Gender, Medical Condition, Duration of Stay, and Test Results, we did not find much
+            variability with our comparative analyses. We can draw from this dataset that there are no dependencies between variables.
+            After exploring the data, we cannot deduce that certain Medication results in a longer Episode of Care, or a particular
+            Gender is more common in a certain Medical Condition. We see that the data is very evenly spread amongst all fields.
+
+            <br>
+            <br>
+
+            Final Visualization: Date of Admission Trend (Line Graph)
         </p>
 
 
