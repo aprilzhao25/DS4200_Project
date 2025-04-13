@@ -2,6 +2,14 @@ Here are some of our design choices for each of our visualizations!
 
 
 Treemap:
+I used a treemap to show the prevalence of five drugs in various medical conditions. 
+Treemaps are best suited for showcasing hierarchical relationships and proportions at a glance. 
+The hierarchy is Medical Condition → Medication, with each drug assigned a distinct color. 
+This allows the audience to easily see how certain drugs are used in various conditions. 
+For example, Lipitor belongs to hypertension, diabetes, and cancer — a trend that may be reflective of standardization in prescribing. 
+I also used a customized color palette and margin spacing to keep the visual clean and accessible.
+The treemap supports meaningful interaction by letting viewers zoom into specific medication groups and hover 
+over each box to view exact values. This helps reveal how certain medications span across multiple medical conditions 
 
 
 Box plot:
