@@ -60,9 +60,10 @@
         <ul>
             
             <li>Preferred Medication for Each Medical Condition (Treemap)</li>
-            <li>Billing Amount by Insurance Provider or Medical Condition (Boxplot) </li>
-            <li>Age Group Distribution by Gender with Average Duration of Stay (Bar Chart)</li>
-            <li>Distribution of Test Result Type by Gender (Bar Chart)</li>
+            <li>Billing Amount by Insurance Provider or Medical Condition (Box plot) </li>
+            <li>Age Group Distribution by Gender with Duration of Stay (Bar plot)</li>
+            <li>Proportional Comparison of Number of Patients by Test Result Type and Gender (Mosaic plot)</li>
+            <li>Date of Admission Trends (Line plot)</li>
 
         </ul>
         <p>Interactive elements include tooltips and data grouping.</p>
@@ -71,7 +72,6 @@
 
     <div class="section" id="visualizations">
         
-        <h3>Treemap: Medication Preference by Medical Condition</h3>
         <p>
             This interactive treemap reveals which medications are most commonly associated with specific medical conditions.
         </p>
@@ -102,7 +102,6 @@
         <br>
         <br>
 
-        <h3>Box Plot: Billing Amount by Insurance Provider or Medical Condition</h3>
         <p>
             This boxplot can show the Billing Amount distribution by Insurance Provider or by Medical Condition.
         </p>
@@ -143,11 +142,10 @@
         <br>
         <br>
 
-        <h3>Bar Chart: Age Group Distribution by Gender with Average Duration of Stay</h3>
         <p>
             This interactive bar chart displays the number of patients across age groups and genders.
         </p>
-        <iframe src="Gender_Average_Duration.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <iframe src="bar_plot_interactive.html" width="100%" height="1000" style="border:none; border-radius: 10px;"></iframe>
         <p>
             This chart allows the user to interact with the data by hovering over the bars. The bars are split by gender - female and male. 
             This plot allows users to view information on the number of patients of a certain gender and age group, and find out 
@@ -169,13 +167,12 @@
         <br>
 
 
-        <h3>Bar Chart: Distribution of Test Result Type by Gender</h3>
         <p>
-            This bar chart reveals the number of patients with each test result based on gender.
+            This mosaic plot reveals the proportions of the number of patients with each test result based on gender.
         </p>
-        <iframe src="Gender_Test_Results.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <iframe src="mosaic_plot.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This static image showcases distribution fo test results by gender. The test result information is split by Inconclusive, 
+            This static image showcases distribution of test results by gender. The test result information is split by Inconclusive, 
             Abnormal, and Normal results. Abnormal results are nearly equal for both genders. However, males 
             tend to have more Normal results than females, while females have slightly more Inconclusive results than males. 
             This could suggest biases in the sampling population, such as a healthier male population. These subtle differences 

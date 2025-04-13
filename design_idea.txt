@@ -1,0 +1,17 @@
+Here are some of our design choices for each of our visualizations!
+
+
+Treemap:
+
+
+Box plot:
+
+
+Bar plot:
+
+
+Mosaic plot:
+
+
+
+Line plot: 
