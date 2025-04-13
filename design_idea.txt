@@ -17,8 +17,19 @@ Box plot:
 
 Bar plot:
 
+Instead of using brush and link to explore Duration of Stay as suggested from the presentation feedback, I decided to create a separate bar chart with an interactive drop-down menu to filter by age group. 
+Since I was comparing Age Group (categorical) and Duration of Stay (quantitative), interval selection didn’t work well and often caused the patient count values to go out of bounds of the y-axis. 
+I also tried visualizing using box plots but found little difference between genders, so I decided a bar chart with its own filtering options would be better at highlighting distribution for Duration of Stay. 
+The drop-down menu also allows easy selection of specific age groups while also being able to see the overall age distribution across all age groups as a whole. 
+Additionally, I used different colors for male and female patients to explore if gender affects the relationship between the number of patients at each duration of stay. 
+
+
 
 Mosaic plot:
+I chose to create a mosaic plot to compare gender and test result types because it provides a clearer view of proportions compared to a bar chart, where counts can be more distracting for users.
+A mosaic plot makes it easier to focus on relative differences between categories which is especially helpful for our dataset since most of our comparisons have little variations between comparisons.
+I used different colors to represent gender in order to stay consistent with the color scheme that was used in our other visualizations.
+Mosaic plot allows for highlighting subtle differences in the test result distributions relative to gender and helps viewers quickly identify differences at a glance. 
 
 
 

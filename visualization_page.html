@@ -147,19 +147,11 @@
         </p>
         <iframe src="bar_plot_interactive.html" width="100%" height="1000" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This chart allows the user to interact with the data by hovering over the bars. The bars are split by Gender - female and male. 
-            This plot allows users to view information on the number of patients of a certain gender and age group, and find out 
-            more about their average duration of stay. There are notably less patients in the 80-90 age group compared 
-            to the rest of the age groups, likely due to the fact that many patients don’t survive until old age, which can be 
-            inferred from the 70-80 age group since it has the highest number of patients compared to the rest of the age groups. 
-            Also, It is interesting to see that among the older population, there is a higher number of female patients while there 
-            is a greater number of male patients in the younger population. However, the variation in the number of patients starts 
-            to decrease around the middle age years, especially in the 50-60 range where there is less patient number difference 
-            between the two genders. When the user hovers of the bars, information such as the binned age group, gender, number
-            of patients, and duration of stay show. Across the board, average duration of stay is 15 - 16 days. This two week
-            period is typical within hospitals to give patients (in Emergency or Urgent Cases) time for operation on their Condition,
-            a rest period, and final checkup.
-
+            When looking at the overall distribution of patients across age groups, the 10-20 age group has the fewest number of patients, likely because the chronic conditions from this dataset like cancer, hypertension, arthritis, asthma, obesity, and diabetes are less common among younger individuals. 
+            The 80-90 age group also has fewer patients likely due to the fact that most people might not survive long enough to reach this age range. 
+            In the 20-30 age group, there is a much higher number of male patients compared to female patients, which could reflect the tendency of males to be more prone to health conditions due to riskier behaviors. 
+            Filtering to look at the distribution in Duration of Stay within this age group, the trend of male patients remains consistent across different lengths of hospitalization, suggesting prolonged stay due to the severity of the health condition found in male patients. 
+            On the other hand, within the 70-80 age group, female patients appear more frequently across different lengths of hospitalizations, which could reflect longer female life expectancy and a high risk for chronic conditions in women due to old age. 
         </p>
     
         <hr>
@@ -172,16 +164,11 @@
         </p>
         <iframe src="mosaic_plot.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This static image showcases distribution of test results by gender. The test result information is split by Inconclusive, 
-            Abnormal, and Normal results. Abnormal results are nearly equal for both genders. However, males 
-            tend to have more Normal results than females, while females have slightly more Inconclusive results than males. 
-            This could suggest biases in the sampling population, such as a healthier male population. These subtle differences 
-            may also point to underlying factors worth further investigation, such as test sensitivity or healthcare access. 
-            From this visual we may ask - do males have more access to healthcare than females? Are there errors in existing diagnostic 
-            tools for test results? We see that there is a higher Abnormal test result population in the dataset, which may indicate
-            a hospital that deals with higher ambiguity in patient health and behavior. Additionally, There are much higher Abnormal
-            test results in females than there are Normal. This suggests that patients who come in for a checkup are receiving 
-            Abnormal results.
+            The mosaic plot provides a clear overview of the proportions of Test Results across genders. 
+            One concerning observation is the large proportion of inconclusive test results which makes up a third of the hospital dataset, making it as frequent as normal results, raises questions about the reliability of hospital diagnosis for all patients. 
+            Abnormal results are evenly distributed between both genders, but males tend to have more normal results, while females have more inconclusive results.
+             This could suggest sampling bias, differences in healthcare access, or potential issues with diagnostic tools used in testing. 
+             The higher proportion of abnormal results in females may suggest greater ambiguity in female patient health or behavior, especially since patients coming in for check-ups are receiving more abnormal results than normal ones. 
         </p>
         
         <hr>
