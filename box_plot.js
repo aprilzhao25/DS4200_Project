@@ -55,7 +55,9 @@ healthcare.then(function(data) {
           .attr('x', margin.right + 700)
           .attr('y', 25)
           .style('stroke', 'black')
-          .text(groupBy);
+          .text(groupBy)
+          .style('font-family', 'sans-serif')
+          .style('font-size', '11px');
 
       // Add y-axis label
       let yAxis = svg
@@ -68,7 +70,9 @@ healthcare.then(function(data) {
           .attr('y', 30)
           .attr('x', 20)
           .style('stroke', 'black')
-          .text('Billing Amount');
+          .text('Billing Amount')
+          .style('font-family', 'sans-serif')
+          .style('font-size', '11px');
       
 
       const rollupFunction = function(groupData) {
