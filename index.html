@@ -102,10 +102,7 @@
         </p>
     </div>
 
-
-    <hr>
-
-    <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div class = "section" id = "visuals" style="display: flex; align-items: center; justify-content: space-between;">
         <h3><i>Let's look at some Visualizations</i></h3>
         <button id="NB" style="padding: 10px 20px; font-size: 16px;">Visualizations</button>
     </div>
@@ -116,21 +113,25 @@
         });
     </script>
 
-    <br>
     
     <div class="section" id="summary">
         <h2>Summary & Future Work</h2>
         <p>
             Initially, we wanted to find bias within the patient demographics with information from their Episodes of Care.
-            When looking at factors like Age, Gender, Medical Condition, Duration of Stay, and Test Results, we did not find much
-            variability with our comparative analyses. We can draw from this dataset that there are no dependencies between variables.
-            After exploring the data, we cannot deduce that certain Medication results in a longer Episode of Care, or a particular
-            Gender is more common in a certain Medical Condition. We see that the data is very evenly spread amongst all fields.
+            When looking at factors like Age, Gender, Duration of Stay, and Billing and Insurance information, we did not find much
+            variability with our comparative analyses. However, we were still able to pull abnormalities within the patient population
+            that the hospitals cared for. We can draw from this dataset that while there are little dependencies between some of the variables, the hospitals
+            should take care in investigating patient population trends like thei high rate of inconclusive Test Results, the Medication 
+            Perscriptions they pair with certain Conditions that may not be needed, and the concerning amount of hypertension cases in early Fall.
 
             <br>
             <br>
 
-            Final Visualization: Date of Admission Trend (Line Graph)
+            This interactive, investigative site can be enhanced to dive deeper into the issues pointed out by the current visualizaitons.
+            If there is no much variability shown between the patients themselves but rather the hospital's treamtent plans and and choices, we can implement
+            more visualizations comparing hospital patterns and general insights. It may be a good idea to take a look at the specific doctors and hospitals
+            that are showcasing atypical patterns and to investigate possible bias and malpractice, however, more Episode of Care field details would be needed to 
+            draw accurate assumptions.
         </p>
 
 

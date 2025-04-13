@@ -73,28 +73,28 @@
     <div class="section" id="visualizations">
         
         <p>
-            This interactive treemap reveals which medications are most commonly associated with specific medical conditions.
+            This interactive treemap reveals which Medications are most commonly associated with specific Medical Conditions.
         </p>
         <iframe src="treemap_shift.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This treemap displays the most commonly prescribed medications for each medical condition. While medications like 
-            Lipitor, which treats high cholesterol, appear frequently under conditions like hypertension and diabetes, it’s 
-            surprising to also see it listed under cancer. Similarly, Penicillin appears as the top medication for arthritis, 
-            asthma, and diabetes, despite those conditions not being bacterial. These patterns raise important questions: Are 
-            these medications being prescribed due to underlying comorbidities, or is there a tendency toward standardized 
+            This treemap displays the most commonly prescribed Medications for each Medical Condition. While Medications like 
+            lipitor, which treats high cholesterol, appear frequently under Conditions like hypertension and diabetes, it is 
+            surprising to also see it listed under cancer. Similarly, penicillin appears as the top Medication for arthritis, 
+            asthma, and diabetes, despite those Conditions not being bacterial. These patterns raise important questions: Are 
+            these Medications being prescribed due to underlying comorbidities, or is there a tendency toward standardized 
             treatment across patients? This visualization not only highlights treatment trends but encourages us to question 
-            whether care is truly personalized or if there may be gaps in individualized decision-making.
+            whether care is truly personalized or if there may be disparities in patient treatment.
         </p>
         <br>
         <p>
             Since there are similarities in top Medications per Condition, this may suggest similarities in the Conditions themselves.
-            For instance, since Ibuprofen and Aspirin are leading medications for Asthma and Obesity, this could mean that 
-            they are related in some way. This would make sense, given that there is a higher possibility of developing Asthma 
-            for people with Obesity, given how it affects their respiratory system. Additionally, the similarities in medications 
-            may suggest that the patients are developing secondary conditions that require common medications like Penicillin,
-            common for infection treatment, and Ibuprofen, typical for pain treatment. However, Lipitor, a cholesterol treatment,
-            is the leading medication for Cancer, which is an atypical Cancer treatment. This might suggest prescription bias with
-            our doctors - are they pushing a medication for brand partnernship that these patients don't need?
+            For instance, since ibuprofen and aspirin are leading Medications for asthma and obesity, this could mean that 
+            they are related in some way. This would make sense, given that there is a higher possibility of developing asthma 
+            for people with obesity, given how it affects their respiratory system. Additionally, the similarities in Medications 
+            may suggest that the patients are developing secondary Conditions that require common Medications like penicillin,
+            used for infection treatment, and ibuprofen, typical for pain treatment. However, lipitor, a cholesterol treatment,
+            is the leading Medication for cancer, which is not generally used to treat cancer. This might suggest prescription bias with
+            our doctors - are they pushing a Medication for brand partnernship that these patients don't need?
 
         </p>
 
@@ -103,7 +103,7 @@
         <br>
 
         <p>
-            This boxplot can show the Billing Amount distribution by Insurance Provider or by Medical Condition.
+            This boxplot shows the Billing Amount distribution by Insurance Provider or by Medical Condition.
         </p>
 
         <div id="boxplot"></div>
@@ -120,19 +120,19 @@
         <p>
             This visualization dislays box plots by different Medical Conditions or by Insurance Providers and the different
             Billing Amounts associated with each category option. When grouping by Medical Condition, we see a slight descent
-            in the maximum billing amounts for each option, with Cancer having the highest Billing Amount at $39,000 and Obesity 
+            in the maximum billing amounts for each option, with cancer having the highest Billing Amount at $39,000 and obesity 
             having the lowest at $35,000. Obesity also holds the lowest Billing Amount with range minimum of around $2,000. The median 
             for each category is around $25,000. Per Insurance Provider, we see Aetna with the lowest range at about $3,000 and
             UniteHealthcare with the highest, about $39,000. The average Billing Amount across all Providers is again around $25,000.
         </p>   
         <br>
         <p>
-            The image suggests that Obesity has the highest variability in gravity given that the range is so large, while Cancer
-            is usually a more serious condition to treat being the the most expensive Condition with the smallest range. Exploring
+            The image suggests that obesity has the highest variability in severity given that the range is so large, while cancer
+            is usually a more serious Condition to treat being the most expensive with the smallest range. Exploring
             our Providers, we can assume that the average patient is insured by Aetna given their large range and lowest minimum
             Billing Amount. Their range may be pulled lower on the scale due to an increased non-emergent caseload, where they
             insure patients going in for their annual checkups. This is an option in Admission Type. UnitedHealthcare is the world's
-            leading Insurance Provider, and given their higher range, this may be from the more expensive cases they deal with.
+            leading Insurance Provider, and given their higher range, this may be due to handling graver, more expensive cases.
         </p>
 
         <script src='https://d3js.org/d3.v7.min.js'></script>
@@ -143,11 +143,11 @@
         <br>
 
         <p>
-            This interactive bar chart displays the number of patients across age groups and genders.
+            This interactive bar chart displays the number of patients across Age groups and Genders.
         </p>
         <iframe src="bar_plot_interactive.html" width="100%" height="1000" style="border:none; border-radius: 10px;"></iframe>
         <p>
-            This chart allows the user to interact with the data by hovering over the bars. The bars are split by gender - female and male. 
+            This chart allows the user to interact with the data by hovering over the bars. The bars are split by Gender - female and male. 
             This plot allows users to view information on the number of patients of a certain gender and age group, and find out 
             more about their average duration of stay. There are notably less patients in the 80-90 age group compared 
             to the rest of the age groups, likely due to the fact that many patients don’t survive until old age, which can be 
@@ -183,11 +183,34 @@
             test results in females than there are Normal. This suggests that patients who come in for a checkup are receiving 
             Abnormal results.
         </p>
+        
+        <hr>
+        <br>
+        <p>
+            This line graph shows the patient count broken out by Medical Condition in the year 2023.
+        </p>
+        <iframe src="admission_trend.html" width="100%" height="600" style="border:none; border-radius: 10px;"></iframe>
+        <p>
+            The purpose of these trendlines are to highlight any seasonal differences in the patient counts the hospita has within each 
+            Medical Condition they diagnose. It would be useful to understand any conditional patterns to give recommendations on the hospital's treatment
+            plans since we'd have a better understanding of a full year's Condition rate.
+        </p>
+        <br>
+        <p>
+            From this graph, we see consistent daily record counts of 1-2 patients per Medical Condition, with several 3-count cases of obesity and arthritis as 
+            demonstrated by the dark blue and yellow lines throughout the year. Asthma appears consistently, however it peaks towards the end of December/early January,
+            suggesting a correlation with the colder months. This could be due increased airway irritation and narrowing from cold air, and the various respiratory 
+            viruses that occur during this time. The hospitals should remain weary of holidays as Thanksgiving time sees a spike in diabetes patient count. 
+            Cancer and hypertension offer the highest patient counts in 2023, peaking at a 5-count case in May for cancer and 
+            7-count case in October for hypertension. Cancer shows increased counts every quarter, which suggests a general pattern in treatment plan for these patients.
+            Hypterension shows higher counts in the Summer and beginning of Fall, which is atypical for this particular Condition as blood vessel constriction is a more
+            common response to lower temperatures. The hospitals should investigate these cases to ensure correct diagnoses.
+        </p>
 
 
         <hr>
         <br>
-        <button id = 'NB' style = 'float: right;'>Back to Home</button>
+        <button id = 'NB' style = 'float: right; padding: 10px 20px; font-size: 16px;'>Back to Home</button>
         
         <script>
             const navigatebutton = document.getElementById('NB')
