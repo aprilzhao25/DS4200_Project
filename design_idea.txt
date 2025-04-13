@@ -1,36 +1,49 @@
-Here are some of our design choices for each of our visualizations!
+Design Choices for Visualizations
 
 
 Treemap:
-I used a treemap to show the prevalence of five drugs in various medical conditions. 
+We use a treemap to show the prevalence of five drugs in various medical conditions. 
 Treemaps are best suited for showcasing hierarchical relationships and proportions at a glance. 
 The hierarchy is Medical Condition → Medication, with each drug assigned a distinct color. 
-This allows the audience to easily see how certain drugs are used in various conditions. 
+This allows the audience to easily see how certain drugs are used in various Conditions. 
 For example, Lipitor belongs to hypertension, diabetes, and cancer — a trend that may be reflective of standardization in prescribing. 
-I also used a customized color palette and margin spacing to keep the visual clean and accessible.
-The treemap supports meaningful interaction by letting viewers zoom into specific medication groups and hover 
-over each box to view exact values. This helps reveal how certain medications span across multiple medical conditions 
+We also used a customized color palette and margin spacing to keep the visual clean and accessible.
+The treemap supports meaningful interaction by letting viewers zoom into specific Medication groups and hover 
+over each box to view exact values. This helps reveal how certain Medications span across multiple Medical Conditions 
 
 
 Box plot:
+The box plot encapsulates the distribution and spread of the Billing information grouped by the different categorical data.
+A box plot is an excellent tool for capturing many statistics of a numerical field broken out by different categories, so it
+proved useful in investigating this particular field. The orange color was taken from the treemap to ensure consistency throughout the entire
+website, and a bold line highlights the medians within each category. Because the medians are so similar, it is important to
+make this line thick so that their small differences jump out to the user. The interactive category selection feature provides
+the option to compare the Insurance and Medical Condition categories. Not only are they interesting to look at on their own, but the selection also
+allows users to draw a financial connection between the Providers and Conditions that they would not have seen within the raw dataset. There were
+no outliers within the dataset when looking at the raw groupings (before box plot visualization), so outlier diamonds were not included in this
+D3 plot.
 
 
 Bar plot:
-
-Instead of using brush and link to explore Duration of Stay as suggested from the presentation feedback, I decided to create a separate bar chart with an interactive drop-down menu to filter by age group. 
-Since I was comparing Age Group (categorical) and Duration of Stay (quantitative), interval selection didn’t work well and often caused the patient count values to go out of bounds of the y-axis. 
-I also tried visualizing using box plots but found little difference between genders, so I decided a bar chart with its own filtering options would be better at highlighting distribution for Duration of Stay. 
+Instead of using brush and link to explore Duration of Stay as suggested from the presentation feedback, we decided to create a separate bar chart with an interactive drop-down menu to filter by age group. 
+Since we were comparing Age Group (categorical) and Duration of Stay (quantitative), interval selection didn’t work well and often caused the patient count values to go out of bounds of the y-axis. 
+We also tried visualizing using box plots but found little difference between genders, so we decided a bar chart with its own filtering options would be better at highlighting distribution for Duration of Stay. 
 The drop-down menu also allows easy selection of specific age groups while also being able to see the overall age distribution across all age groups as a whole. 
-Additionally, I used different colors for male and female patients to explore if gender affects the relationship between the number of patients at each duration of stay. 
-
+Additionally, we used different colors for male and female patients to explore if gender affects the relationship between the number of patients at each duration of stay. 
 
 
 Mosaic plot:
-I chose to create a mosaic plot to compare gender and test result types because it provides a clearer view of proportions compared to a bar chart, where counts can be more distracting for users.
-A mosaic plot makes it easier to focus on relative differences between categories which is especially helpful for our dataset since most of our comparisons have little variations between comparisons.
-I used different colors to represent gender in order to stay consistent with the color scheme that was used in our other visualizations.
-Mosaic plot allows for highlighting subtle differences in the test result distributions relative to gender and helps viewers quickly identify differences at a glance. 
-
+We chose to create a mosaic plot to compare Gender and Test Result types because it provides a clearer view of proportions compared to a bar chart, where counts can be more distracting for users.
+A mosaic plot makes it easier to focus on relative differences between categories, which is especially helpful for our dataset since most of our comparisons have little variation between comparisons.
+We used different colors to represent gender to stay consistent with the color scheme that was used in our other visualizations. The
+mosaic plot highlights subtle differences in the test result distributions relative to gender and helps viewers quickly identify differences at a glance. 
 
 
 Line plot: 
+The line plot's purpose is to investigate a timeline trend within the data. More specifically, to see if there are seasonal differences
+within the patient population of a certain Medical Condition. Interactiveness is not needed for this visualization since it is aimed
+solely to draw conclusions based on the Condition and the Date of Admission. If we incorporate outside fields, it would be too cluttered
+and stray from the plot's purpose. It is also unnecessary to show the patient count since it is very clear from the peaks what the counts are for each date. The colors reflect the treemap's palette to ensure consistency. Additionally, the year 2023 is used because
+it is the most recent full year in the dataset; it would not have been as useful for giving investigation recommendations if we had based the pattern findings on, for example, 2021 data. Even though the line trends are very compact, we must give the full year information,
+since the conclusions we draw refer to seasonal changes.
+
