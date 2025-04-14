@@ -1,5 +1,5 @@
 Design Choices for Visualizations
-site: http://127.0.0.1:5500/index.html
+site: https://aprilzhao25.github.io/DS4200_Project/
 Bella Bartolomei, Sameera Boga, April Zhao
 
 
